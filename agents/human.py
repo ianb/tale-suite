@@ -40,6 +40,8 @@ class HumanAgent(tales.Agent):
 
     def act(self, obs, reward, done, infos):
         available_commands = infos.get("admissible_commands", [])
+        print("\n")
+        print(obs)
         if prompt_toolkit_available:
             actions_completer = WordCompleter(
                 available_commands, ignore_case=True, sentence=True
