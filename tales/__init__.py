@@ -40,10 +40,10 @@ for task in tasks:
                 envs.append(env_name)
                 envs_per_task[task].append(env_name)
         else:
-            warnings.warn(
-                "Failed to load `{}.environments`. Skipping the task.".format(task),
-                UserWarning,
-            )
+            # warnings.warn(
+            #     "Failed to load `{}.environments`. Skipping the task.".format(task),
+            #     UserWarning,
+            # )
             continue
 
     except Exception as e:
